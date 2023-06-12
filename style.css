@@ -1,12 +1,12 @@
 body {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   font-family: Arial;
   padding: 30px;
   margin: 0px;
 }
 a {
-  color:lime;
+  color:blue;
 }
 h1, h2, h3, h4, h5 {
   text-align: center;
