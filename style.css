@@ -11,3 +11,30 @@ a {
 h1, h2, h3, h4, h5 {
   text-align: center;
 }
+h1 {
+  font-size: 36px; /* Average of 32px and 40px */
+}
+
+h2 {
+  font-size: 28px; /* Average of 24px and 32px */
+}
+
+h3 {
+  font-size: 21px; /* Average of 18px and 24px */
+}
+
+h4 {
+  font-size: 18px; /* Average of 16px and 20px */
+}
+
+h5 {
+  font-size: 16px; /* Average of 14px and 18px */
+}
+
+h6 {
+  font-size: 14px; /* Average of 12px and 16px */
+}
+
+p {
+  font-size: 15px; /* Average of 14px and 16px */
+}
