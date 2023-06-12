@@ -5,20 +5,24 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!--Fix the js such that the third line in each function below properly changes the link color.-->
   <script>
     function darkMode() {
       document.body.style.backgroundColor = "black";
       document.body.style.color = "white";
-      document.a.style.color = "yellow";
+      var links = document.getElementsByTagName("a");
+      for (var i = 0; i < links.length; i++) {
+        links[i].style.color = "yellow";
+      }
     }
     function lightMode() {
       document.body.style.backgroundColor = "white";
       document.body.style.color = "black";
-      document.a.style.color = "blue";   
+      var links = document.getElementsByTagName("a");
+      for (var i = 0; i < links.length; i++) {
+        links[i].style.color = "blue";
+      }
     }
   </script>
-
   <button type="button" onclick="darkMode()">Dark Mode</button>
   <button type="button" onclick="lightMode()">Light Mode</button>
 
