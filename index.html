@@ -1,44 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Amir R. Syed - Home</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <script>
-    function darkMode() {
-      document.body.style.backgroundColor = "black";
-      document.body.style.color = "white";
-      var links = document.getElementsByTagName("a");
-      for (var i = 0; i < links.length; i++) {
-        links[i].style.color = "yellow";
-      }
-    }
-    function lightMode() {
-      document.body.style.backgroundColor = "white";
-      document.body.style.color = "black";
-      var links = document.getElementsByTagName("a");
-      for (var i = 0; i < links.length; i++) {
-        links[i].style.color = "blue";
-      }
-    }
-  </script>
-  <button type="button" onclick="darkMode()">Dark Mode</button>
-  <button type="button" onclick="lightMode()">Light Mode</button>
-
-  <ul>
-    <li><a href="https://amirrsyed.github.io/">Home</a></li>
-    <li><a href="https://amirrsyed.github.io/essays">Essays</a></li>
-    <li><a href="">Recent Work</a></li>
-    <li><a href="https://amirrsyed.github.io/about">About</a></li>
-  </ul>
-  <h1>Amir R Syed</h1>
-  <p>Hello, and welcome to AmirRSyed.github.io</p>
-  <h2>Featured</h2>
-  <h2>Most Recent</h2>
-  
-  
-  <p>Amir Syed, 2023</p>
-
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="essays.html">Essays</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Welcome to My Portfolio</h1>
+            <p>This is a minimalistic portfolio website where you can learn more about my projects, read my essays, and get to know more about me.</p>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Your Name. All rights reserved.</p>
+    </footer>
 </body>
 </html>
