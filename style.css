@@ -1,52 +1,11 @@
-/* styles.css */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    color: #333;
-    background-color: #f4f4f9;
-}
+body { 
+	  line-height: 1.4;
+	    font-size: 16px;
+	    padding: 0 10px;
+	    margin: 50px auto;
+	    max-width: 650px;
+	}
 
-header {
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    padding: 10px 20px;
-    display: inline-block;
-}
-
-nav ul li a.active,
-nav ul li a:hover {
-    background-color: #e0e0e0;
-}
-
-main {
-    padding: 20px;
-    text-align: center;
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    background-color: #ffffff;
-    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
-}
+#maincontent {
+	max-width:42em;margin:15 auto;
+	}
