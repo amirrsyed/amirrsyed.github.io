@@ -12,16 +12,41 @@
       font-size: 16px;
       padding: 0 10px;
       margin: 50px auto;
-      max-width: 650px;
+      max-width: 800px;
     }
-    #maincontent
-    {
-      max-width:42em;margin:15 auto;
+    #maincontent {
+      max-width: 42em;
+      margin: 15px auto;
+    }
+    #layout {
+      display: flex;
+      align-items: flex-start;
+      gap: 36px;
+    }
+    #profile-img-wrapper {
+      flex-shrink: 0;
+      padding-top: 108px;
+    }
+    #profile-img-wrapper img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #ccc;
+      display: block;
+    }
+    #content {
+      flex: 1;
     }
   </style>	
 </head>
 <body>
 <div id="maincontent" style="margin-top:70px">
+<div id="layout">
+  <div id="profile-img-wrapper">
+    <img src="/Amir_Syed_Profile.png" alt="Amir Syed">
+  </div>
+  <div id="content">
   <h3>Navigation</h3>
   <a href="/" class="active">Home</a>
   <a href="/projects">Projects</a>
@@ -50,6 +75,7 @@
   <a href="https://x.com/amirsyed_" target="_blank">X</a>
   <br><br>
   <p>© 2026 Amir Syed. All rights reserved.</p>
-
+  </div><!-- end #content -->
+</div><!-- end #layout -->
   </body>
   </html>
