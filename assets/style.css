@@ -1,0 +1,145 @@
+/* Quiet Serif theme */
+:root {
+  color-scheme: light;
+  --bg: #faf8f4;
+  --ink: #1c1b19;
+  --muted: #6b665e;
+  --rule: #e3ded4;
+  --accent: #7a2e1f;
+  --accent-hover: #4f1b11;
+  --serif: "Newsreader", Georgia, "Times New Roman", serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { background: var(--bg); }
+
+body {
+  margin: 0 auto;
+  max-width: 620px;
+  padding: 72px 24px 56px;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 19px;
+  line-height: 1.55;
+  -webkit-text-size-adjust: 100%;
+}
+
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--accent-hover); }
+a:not([href]) { color: var(--muted); text-decoration: none; }
+
+p { margin: 0 0 0.9em; }
+ul { margin: 0 0 0.9em; padding-left: 1.2em; }
+li { margin-bottom: 0.15em; }
+img { max-width: 100%; height: auto; }
+
+/* Header */
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px 24px;
+  margin-bottom: 48px;
+}
+.site-name, .site-name a {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+}
+.site-header nav { display: flex; gap: 24px; font-size: 17px; }
+.site-header nav a { text-decoration: none; }
+.site-header nav a:hover, .site-header nav a[aria-current="page"] { text-decoration: underline; }
+
+/* Page headings and section labels */
+h1 { font-size: 30px; font-weight: 500; line-height: 1.2; margin: 0 0 28px; }
+h2 { font-size: 21px; font-weight: 500; margin: 0 0 8px; }
+.label {
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+section + section { margin-top: 44px; }
+
+/* Home */
+.intro { display: flex; gap: 28px; align-items: flex-start; }
+.portrait {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+/* Writing list */
+.post-list { list-style: none; padding: 0; margin: 0; }
+.post-list li { display: flex; gap: 24px; margin-bottom: 12px; }
+.post-list time {
+  width: 88px;
+  flex-shrink: 0;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.more { font-style: italic; font-size: 17px; }
+.empty { color: var(--muted); font-style: italic; }
+
+/* Projects and research */
+.project + .project { margin-top: 36px; }
+.year { color: var(--muted); margin: 20px 0 4px; }
+
+/* Essays */
+.essay header h1 { margin-bottom: 6px; }
+.essay .meta { color: var(--muted); font-size: 16px; margin-bottom: 36px; }
+.essay-body { font-size: 20px; line-height: 1.65; }
+.essay-body h2 { margin-top: 1.6em; }
+.essay-body blockquote {
+  margin: 1.2em 0;
+  padding-left: 20px;
+  border-left: 2px solid var(--rule);
+  color: #45423d;
+  font-style: italic;
+}
+.essay-body pre { overflow-x: auto; font-size: 15px; }
+.back { margin-top: 48px; font-size: 17px; }
+
+/* Footer */
+.site-footer {
+  margin-top: 72px;
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+  font-size: 16px;
+  color: var(--muted);
+}
+.footer-links { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 22px; margin-bottom: 12px; }
+.email { display: inline-flex; align-items: baseline; gap: 8px; white-space: nowrap; }
+.email summary {
+  display: inline;
+  list-style: none;
+  cursor: pointer;
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.email summary::-webkit-details-marker { display: none; }
+
+.email span { color: var(--ink); }
+.site-footer p { margin: 0; font-size: 15px; }
+
+/* Phones */
+@media (max-width: 600px) {
+  body { padding: 40px 20px 40px; font-size: 18px; }
+  .site-header { margin-bottom: 36px; }
+  .intro { flex-direction: column; gap: 20px; }
+  .portrait { width: 104px; height: 104px; margin-top: 0; }
+  .post-list li { flex-direction: column; gap: 0; margin-bottom: 18px; }
+  .post-list time { width: auto; font-size: 15px; }
+  .essay-body { font-size: 19px; }
+}
