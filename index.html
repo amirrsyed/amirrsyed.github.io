@@ -1,95 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Amir Syed</title>
-  <meta name="description" content="About Amir Syed, a finance and technology student from Unionville and Greater Philadelphia.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="color-scheme" content="light">
-  <link rel="icon" type="image/x-icon" href="/favicon.png">
-  <style>
-    :root {
-      color-scheme: light;
-    }
-    html {
-      background-color: #ffffff;
-    }
-    body {
-      background-color: #ffffff;
-      color: #000000;
-    }
-    a:link { color: #0000ee; }
-    a:visited { color: #551a8b; }
-    body { 
-      line-height: 1.4;
-      font-size: 16px;
-      padding: 0 10px;
-      margin: 50px auto;
-      max-width: 800px;
-    }
-    #maincontent {
-      max-width: 42em;
-      margin: 15px auto;
-    }
-    #layout {
-      display: flex;
-      align-items: flex-start;
-      gap: 36px;
-    }
-    #profile-img-wrapper {
-      flex-shrink: 0;
-      padding-top: 108px;
-    }
-    #profile-img-wrapper .circle {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      border: 3px solid #ccc;
-      background-image: url('/Amir_Syed_Profile.png');
-      background-size: 130%;
-      background-position: center top;
-    }
-    #content {
-      flex: 1;
-    }
-  </style>	
-</head>
-<body>
-<div id="maincontent" style="margin-top:70px">
-<div id="layout">
-  <div id="profile-img-wrapper">
-    <div class="circle"></div>
-  </div>
-  <div id="content">
-  <h3>Navigation</h3>
-  <a href="/" class="active">Home</a>
-  <a href="/projects">Projects</a>
-  <a href="/thoughts">Thoughts</a>
-  <a href="/about">About</a>
-  <h2>Amir Syed</h2>
+---
+layout: default
+---
+<section class="intro">
+  <img class="portrait" src="/assets/amir-syed.jpg" alt="Amir Syed" width="120" height="120">
+  <div>
     <p><b>Intro</b></p>
     <p>I am based out of Greater Philadelphia and currently attend UNC.</p>
     <p>I am interested in:</p>
     <ul>
-        <li>finance & markets</li>
-        <li>biopharma</li>
-        <li>AI & SWE</li>
-        <li>mathematical applications to all the above</li>
-        <li>music & media production</li>
-        <li>literary, philosophical, political, & economic canon/discourse</li>
+      <li>finance &amp; markets</li>
+      <li>biopharma</li>
+      <li>AI &amp; SWE</li>
+      <li>mathematical applications to all the above</li>
+      <li>music &amp; media production</li>
+      <li>literary, philosophical, political, &amp; economic canon/discourse</li>
     </ul>
-    <p>See <a href="/about">about</a> or read selected <a href="/thoughts">thoughts</a>.</p>
-  <br><br><br>
-  <br>
-  
-  <h3>Links</h3>
-  <a href="https://www.linkedin.com/in/realamirsyed/">LinkedIn</a>
-  <a>YouTube</a>
-  <a href="https://github.com/amirrsyed/">GitHub</a>
-  <a href="https://x.com/amirsyed_" target="_blank">X</a>
-  <br><br>
-  <p>© 2026 Amir Syed. All rights reserved.</p>
-  </div><!-- end #content -->
-</div><!-- end #layout -->
-  </body>
-  </html>
+    <p>See <a href="/about">about</a> or read selected <a href="/writing/">writing</a>.</p>
+  </div>
+</section>
+{%- if site.posts.size > 0 %}
+
+<section>
+  <p class="label">Writing</p>
+  <ul class="post-list">
+    {%- for post in site.posts limit: 5 %}
+    <li><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %Y" }}</time><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {%- endfor %}
+  </ul>
+  {%- if site.posts.size > 5 %}
+  <a class="more" href="/writing/">All writing →</a>
+  {%- endif %}
+</section>
+{%- endif %}

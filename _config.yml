@@ -1,0 +1,28 @@
+# Site settings
+title: Amir Syed
+description: About Amir Syed, a finance and technology student from Unionville and Greater Philadelphia.
+author: Amir Syed
+twitter_username: amirsyed_
+timezone: America/New_York
+
+# When your custom domain is live, change this line to it, e.g. "https://amirsyed.com"
+url: "https://amirrsyed.github.io"
+baseurl: ""
+
+plugins:
+  - jekyll-feed
+
+feed:
+  path: feed.xml
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      # Essays in _posts/ are published at /writing/<title>/
+      permalink: /writing/:title/
+
+exclude:
+  - README.md
