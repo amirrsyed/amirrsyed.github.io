@@ -20,19 +20,13 @@
    `/writing/`, on the homepage, in the RSS feed (`/feed.xml`), and in the sitemap automatically.
 
 A post dated in the future won't appear until that date (after the next commit).
-## Publishing a note
-
-Notes are short pieces. They work exactly like essays, except the file goes in `_notes/`:
-name it `_notes/YYYY-MM-DD-short-title.md` with the same `title:` header.
-Notes appear on `/notes/` and have their own feed at `/notes/feed.xml`.
-
 ## Updating /now
 
 Edit `now.html` and write below the `<h1>Now</h1>` line.
 
 ## Editing
 
-To edit or unpublish, edit or delete the file in `_posts/` or `_notes/`.
+To edit or unpublish, edit or delete the file in `_posts/`.
 Files in `_drafts/` are never published.
 
 ## Structure

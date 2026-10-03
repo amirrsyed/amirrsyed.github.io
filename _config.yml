@@ -12,17 +12,8 @@ baseurl: ""
 plugins:
   - jekyll-feed
 
-# Notes: short pieces in _notes/, published at /notes/<title>/
-collections:
-  notes:
-    output: true
-    permalink: /notes/:title/
-
 feed:
   path: feed.xml
-  collections:
-    notes:
-      path: /notes/feed.xml
 
 defaults:
   - scope:
@@ -32,11 +23,6 @@ defaults:
       layout: post
       # Essays in _posts/ are published at /writing/<title>/
       permalink: /writing/:title/
-  - scope:
-      path: ""
-      type: notes
-    values:
-      layout: post
 
 exclude:
   - README.md

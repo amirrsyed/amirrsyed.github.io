@@ -16,10 +16,4 @@ layout: null
     <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
   </url>
 {%- endfor %}
-{%- for note in site.notes %}
-  <url>
-    <loc>{{ note.url | absolute_url }}</loc>
-    <lastmod>{{ note.date | date_to_xmlschema }}</lastmod>
-  </url>
-{%- endfor %}
 </urlset>
