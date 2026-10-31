@@ -5,8 +5,7 @@ author: Amir Syed
 twitter_username: amirsyed_
 timezone: America/New_York
 
-# When your custom domain is live, change this line to it, e.g. "https://amirsyed.com"
-url: "https://amirrsyed.github.io"
+url: "https://amirsyed.xyz"
 baseurl: ""
 
 plugins:
