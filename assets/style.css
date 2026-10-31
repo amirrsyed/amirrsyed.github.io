@@ -78,6 +78,9 @@ section + section { margin-top: 44px; }
   margin-top: 6px;
 }
 
+.interests > li { margin-bottom: 0.5em; }
+.interests ul { margin: 0.15em 0 0; color: var(--muted); font-size: 17px; line-height: 1.5; }
+
 /* Writing list */
 .post-list { list-style: none; padding: 0; margin: 0; }
 .post-list li { display: flex; gap: 24px; margin-bottom: 12px; }
