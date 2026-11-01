@@ -1,0 +1,39 @@
+# Builds the Jekyll site and deploys it to GitHub Pages. Runs on every push to
+# main, every morning (so future-dated posts go live on their date), and by
+# hand from the Actions tab.
+name: Deploy site
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # 10:17 UTC = 6:17 am Eastern (5:17 am in winter)
+    - cron: "17 10 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/jekyll-build-pages@v1
+      - uses: actions/upload-pages-artifact@v3
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
