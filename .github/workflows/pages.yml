@@ -18,7 +18,9 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  # Never cancel a deploy midway: an interrupted Pages deployment can stay
+  # "in progress" on GitHub's side and block every later deploy.
+  cancel-in-progress: false
 
 jobs:
   build:
